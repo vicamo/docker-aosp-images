@@ -1,0 +1,16 @@
+FROM vicamo/qemu-user-static:@IMAGE_QEMU_ARCH@
+
+MAINTAINER You-Sheng Yang <vicamo@gmail.com>
+
+LABEL aosp.platform.version="@PLATFORM_VERSION@" \
+      aosp.build.variant="@TARGET_BUILD_VARIANT@" \
+      aosp.product="@TARGET_PRODUCT@" \
+      aosp.arch="@TARGET_ARCH@" \
+      aosp.arch.variant="@TARGET_ARCH_VARIANT@" \
+      aosp.cpu.variant="@TARGET_CPU_VARIANT@" \
+      aosp.2nd-arch="@TARGET_2ND_ARCH@" \
+      aosp.2nd-arch.variant="@TARGET_2ND_ARCH_VARIANT@" \
+      aosp.2nd-cpu.variant="@TARGET_2ND_CPU_VARIANT@" \
+      aosp.build-id="@BUILD_ID@"
+
+ADD root.tar.gz /
